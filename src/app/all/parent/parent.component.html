@@ -1,0 +1,60 @@
+<div class="form-group row">
+  <div class="col-md-6">
+    <div class="card bg-primary p-4 shadow">
+      <div class="card-title">
+        <h4>Parent Component</h4>
+      </div>
+      <div class="card-body">
+        <h4>@Input() ------></h4>
+        <input
+          class="form-control"
+          type="text"
+          id="inputfield"
+          placeholder="type here ....."
+          #val
+        />
+        <div class="display-inline mt-2">
+          <button
+            type="button"
+            class="btn btn-success"
+            (click)="SubmitVal(val)"
+          >
+            Add
+          </button>
+          &nbsp;&nbsp;
+          <button
+            type="button"
+            class="btn btn-warning"
+            (click)="changeDefaultMessage()"
+          >
+            Change Message
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="destroy()"
+            style="float: right"
+          >
+            Remove Component From Dom
+          </button>
+        </div>
+        <br />
+        <p>From Child Component : {{ receiver }}</p>
+        <span>From Message Service : {{ newValue }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <app-child
+      *ngIf="compExist"
+      [receiveValue]="passValue"
+      (messageEvent)="messageReceive($event)"
+      >angular {{ passValue }}</app-child
+    >
+  </div>
+</div>
+<div class="form-group row">
+  <app-viewchild></app-viewchild>
+</div>

@@ -1,0 +1,23 @@
+ <div class="form-group row">
+    <div class="col-md-6"> 
+        <div class="card text-white bg-warning shadow mt-4 p-4">
+            <div class="card-title">
+                <h4>ViewChild </h4>
+            </div>
+            <div class="card-body">
+                <div #box>
+                    <h3>User Name : <strong>{{uName}}</strong></h3>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-success" (click)="changeName()">Change UserName</button>&nbsp;
+                        <button type="button" class="btn btn-danger" (click)="callAlert()">Call alert</button>
+                    </div>
+                    <span>From Message Service : {{newValue}}</span>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-6">
+            <app-child2></app-child2>
+          </div>
+ </div>
+

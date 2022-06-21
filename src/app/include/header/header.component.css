@@ -1,0 +1,39 @@
+
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+  }
+
+  .toolbar img {
+    margin: 0 16px;
+  }
+  .toolbar .myStyle{
+    margin-left: 63%;
+  }
+ .myStyle a,
+  a:visited,
+  a:hover {
+    color: white;
+    text-decoration: none;
+  }
+
+ .myStyle a:hover {
+    color: white;
+    background-color: red;
+    padding: 5px;
+    border-radius: 2px;
+  }
+
+.nav-tabs{
+    border-bottom: 1px solid #1976d2;
+    margin-left: 52rem;
+}

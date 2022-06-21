@@ -1,0 +1,14 @@
+<div class="card text-white bg-secondary p-4 shadow">
+    <div class="card-title">
+        <h4>Child Component</h4>
+    </div>
+    <div class="card-body">
+        <h4> <-------- @Output()</h4>
+            <input type="text" class="form-control" placeholder="type here ....." #val>
+            <button type="button" class="btn-primary mt-2" (click)="sendMessage(val)">Send Message</button>    
+        <p>From Parent Component :{{receiveValue}}</p>
+        <p>From Message Service : {{newValue}}</p>
+        Ng Content :
+        <ng-content></ng-content>
+    </div>
+</div>
